@@ -19,7 +19,7 @@ body{
     text-align: right;
 }
 .third{
-    background-color: rgba(170, 61, 24, 0.886);
+    background-color: rgb(252, 11, 11);
     border-radius: 5px;
     font-size:xx-large;
     font-weight: bolder;
@@ -90,29 +90,18 @@ body{
 height: 200px;
 }
 
-.poster1{
-  height: 350px;
-  margin-top: -37.5px;
-  border: 10px solid rgb(95, 89, 89);
-  margin-left: -10px;
+.bkbiet-pic{
+    height: 400px;
 }
 
-.poster2{
- height:350px;
- border: 10px solid rgb(95, 89, 89);
- margin-top: -5px;
- margin-left: 429px;
-}
+.bkbiet-div img{
+    margin-top: 10px;
 
-.poster3{
-height: 350px;
-margin-left: -10px;
-margin-top: -5px;
-border: 10px solid rgb(95, 89, 89);
-}
-s
-.poster4{
-    height: 300px;
+    display: flex;
+    width:100%;
+    height:85vh;
+    border-top:5px solid rgba(61, 61, 115, 0.956);
+    
 }
 
 .end{
@@ -142,7 +131,7 @@ s
 }
 
 .login-div{
-    margin-top: 400px;
+   
     margin-left: 40%;
 }
 
