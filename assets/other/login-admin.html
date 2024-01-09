@@ -1,0 +1,66 @@
+    </body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #000000;
+            overflow: hidden;
+        }
+
+        .admin-label {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .logout-button {
+            text-decoration: none;
+            float: right;
+            background-color: #ed0f0f;
+            font-size: larger;
+            font-weight: 500;
+            color: white;
+            padding: 14px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .logout-button:hover {
+            background-color: #b00;
+
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="#"  style="font-weight: 600; font-size: larger;" class="admin-label">Admin</a>
+        <a href="../../index.html" style="font-size: larger;" class="logout-button" onclick="logout()">Log out</a>
+    </div>
+
+    <script>
+        function logout() {
+            // Redirect to adminLogin.html
+            window.location.href = "adminLogin.html";
+        }
+    </script>
+
+</body>
+</html>
