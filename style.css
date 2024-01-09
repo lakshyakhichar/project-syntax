@@ -93,13 +93,13 @@ height: 200px;
 .poster1{
   height: 350px;
   margin-top: -37.5px;
-  border: 10px solid black;
+  border: 10px solid rgb(95, 89, 89);
   margin-left: -10px;
 }
 
 .poster2{
  height:350px;
- border: 10px solid black;
+ border: 10px solid rgb(95, 89, 89);
  margin-top: -5px;
  margin-left: 429px;
 }
@@ -108,7 +108,7 @@ height: 200px;
 height: 350px;
 margin-left: -10px;
 margin-top: -5px;
-border: 10px solid black;
+border: 10px solid rgb(95, 89, 89);
 }
 s
 .poster4{
@@ -124,4 +124,26 @@ s
     font-size: x-large;
     padding: 3px;
 }
+
+
+.login{
+    font-weight: bolder;
+    font-size: larger;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    background-color: aliceblue;
+    text-align: center;
+    padding: 3px;
+    border: 3px solid black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: x-large;
+    margin-right: 10px;
+}
+
+.login-div{
+    margin-top: 400px;
+    margin-left: 40%;
+}
+
 
