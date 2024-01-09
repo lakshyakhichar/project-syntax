@@ -40,7 +40,7 @@
 </head>
 <body>
 
-    <form action="/submit" method="post">
+    <form action1="/submit" method="post">
         <h2>College Admission Application</h2>
 
         <!-- Personal Information -->
@@ -153,10 +153,24 @@
         <label for="photo">Upload your Passport-size Photo (Max size: 2MB):</label>
         <input type="file" id="photo" name="photo" accept="image/*" size="2097152" required>
         <small>Only image files (up to 2MB) are allowed.</small>
-        
-        <!-- Branch Preferences --><!--
+    
+        <!-- Branch Preferences -->
         <label for="preference-1">*Preference 1:</label>
-        <select id="preference-1" name="preference-1" onchange="updateBranchOptions('preference-2', this.value)" required>
+        <select id="preference-1" name="preference-1" required>
+            <option value="" selected disabled>Select Branch:</option>
+            <option value="Computer Science and Engineering">Computer Science and Engineering</option>
+            <option value="Electrical Engineering">Electrical Engineering</option>
+            <option value="Mechanical Engineering">Mechanical Engineering</option>
+            <option value="Civil Engineering">Civil Engineering</option>
+            <option value="Chemical Engineering">Chemical Engineering</option>
+            <option value="Electronics and Communication Engineering">Electronics and Communication Engineering</option>
+            <option value="Aerospace Engineering">Aerospace Engineering</option>
+            <option value="Biotechnology">Biotechnology</option>
+            <option value="Environmental Engineering">Environmental Engineering</option>
+        </select>
+
+        <label for="preference-2">*Preference 2:</label>
+        <select id="preference-2" name="preference-2" required>
             <option value="" selected disabled>Select Branch</option>
             <option value="Computer Science and Engineering">Computer Science and Engineering</option>
             <option value="Electrical Engineering">Electrical Engineering</option>
@@ -168,103 +182,69 @@
             <option value="Biotechnology">Biotechnology</option>
             <option value="Environmental Engineering">Environmental Engineering</option>
         </select>
-    -->
-        <!-- Branch Preferences -->
-<label for="preference-1">*Preference 1:</label>
-<select id="preference-1" name="preference-1" onchange="updateBranchOptions('preference-2', this.value)" required>
-    <option value="" selected disabled>Select Branch</option>
-    <option value="Computer Science and Engineering">Computer Science and Engineering</option>
-    <option value="Electrical Engineering">Electrical Engineering</option>
-    <option value="Mechanical Engineering">Mechanical Engineering</option>
-    <option value="Civil Engineering">Civil Engineering</option>
-    <option value="Chemical Engineering">Chemical Engineering</option>
-    <option value="Electronics and Communication Engineering">Electronics and Communication Engineering</option>
-    <option value="Aerospace Engineering">Aerospace Engineering</option>
-    <option value="Biotechnology">Biotechnology</option>
-    <option value="Environmental Engineering">Environmental Engineering</option>
-</select>
 
-<label for="preference-2">*Preference 1:</label>
-<select id="preference-1" name="preference-1" onchange="updateBranchOptions('preference-2', this.value)" required>
-    <option value="" selected disabled>Select Branch</option>
-    <option value="Computer Science and Engineering">Computer Science and Engineering</option>
-    <option value="Electrical Engineering">Electrical Engineering</option>
-    <option value="Mechanical Engineering">Mechanical Engineering</option>
-    <option value="Civil Engineering">Civil Engineering</option>
-    <option value="Chemical Engineering">Chemical Engineering</option>
-    <option value="Electronics and Communication Engineering">Electronics and Communication Engineering</option>
-    <option value="Aerospace Engineering">Aerospace Engineering</option>
-    <option value="Biotechnology">Biotechnology</option>
-    <option value="Environmental Engineering">Environmental Engineering</option>
-</select>
+        <label for="preference-3">*Preference 3:</label>
+        <select id="preference-3" name="preference-3" required>
+            <option value="" selected disabled>Select Branch</option>
+            <option value="Computer Science and Engineering">Computer Science and Engineering</option>
+            <option value="Electrical Engineering">Electrical Engineering</option>
+            <option value="Mechanical Engineering">Mechanical Engineering</option>
+            <option value="Civil Engineering">Civil Engineering</option>
+            <option value="Chemical Engineering">Chemical Engineering</option>
+            <option value="Electronics and Communication Engineering">Electronics and Communication Engineering</option>
+            <option value="Aerospace Engineering">Aerospace Engineering</option>
+            <option value="Biotechnology">Biotechnology</option>
+            <option value="Environmental Engineering">Environmental Engineering</option>
+        </select>
 
-<label for="preference-1">*Preference 1:</label>
-<select id="preference-1" name="preference-1" onchange="updateBranchOptions('preference-2', this.value)" required>
-    <option value="" selected disabled>Select Branch</option>
-    <option value="Computer Science and Engineering">Computer Science and Engineering</option>
-    <option value="Electrical Engineering">Electrical Engineering</option>
-    <option value="Mechanical Engineering">Mechanical Engineering</option>
-    <option value="Civil Engineering">Civil Engineering</option>
-    <option value="Chemical Engineering">Chemical Engineering</option>
-    <option value="Electronics and Communication Engineering">Electronics and Communication Engineering</option>
-    <option value="Aerospace Engineering">Aerospace Engineering</option>
-    <option value="Biotechnology">Biotechnology</option>
-    <option value="Environmental Engineering">Environmental Engineering</option>
-</select>
+        <label for="preference-4">*Preference 4:</label>
+        <select id="preference-4" name="preference-4" required>
+            <option value="" selected disabled>Select Branch</option>
+            <option value="Computer Science and Engineering">Computer Science and Engineering</option>
+            <option value="Electrical Engineering">Electrical Engineering</option>
+            <option value="Mechanical Engineering">Mechanical Engineering</option>
+            <option value="Civil Engineering">Civil Engineering</option>
+            <option value="Chemical Engineering">Chemical Engineering</option>
+            <option value="Electronics and Communication Engineering">Electronics and Communication Engineering</option>
+            <option value="Aerospace Engineering">Aerospace Engineering</option>
+            <option value="Biotechnology">Biotechnology</option>
+            <option value="Environmental Engineering">Environmental Engineering</option>
+        </select>
 
-<label for="preference-1">*Preference 1:</label>
-<select id="preference-1" name="preference-1" onchange="updateBranchOptions('preference-2', this.value)" required>
-    <option value="" selected disabled>Select Branch</option>
-    <option value="Computer Science and Engineering">Computer Science and Engineering</option>
-    <option value="Electrical Engineering">Electrical Engineering</option>
-    <option value="Mechanical Engineering">Mechanical Engineering</option>
-    <option value="Civil Engineering">Civil Engineering</option>
-    <option value="Chemical Engineering">Chemical Engineering</option>
-    <option value="Electronics and Communication Engineering">Electronics and Communication Engineering</option>
-    <option value="Aerospace Engineering">Aerospace Engineering</option>
-    <option value="Biotechnology">Biotechnology</option>
-    <option value="Environmental Engineering">Environmental Engineering</option>
-</select>
+        <label for="preference-5">*Preference 5:</label>
+        <select id="preference-5" name="preference-5" required>
+            <option value="" selected disabled>Select Branch</option>
+            <option value="Computer Science and Engineering">Computer Science and Engineering</option>
+            <option value="Electrical Engineering">Electrical Engineering</option>
+            <option value="Mechanical Engineering">Mechanical Engineering</option>
+            <option value="Civil Engineering">Civil Engineering</option>
+            <option value="Chemical Engineering">Chemical Engineering</option>
+            <option value="Electronics and Communication Engineering">Electronics and Communication Engineering</option>
+            <option value="Aerospace Engineering">Aerospace Engineering</option>
+            <option value="Biotechnology">Biotechnology</option>
+            <option value="Environmental Engineering">Environmental Engineering</option>
+        </select>
 
-<label for="preference-1">*Preference 1:</label>
-<select id="preference-1" name="preference-1" onchange="updateBranchOptions('preference-2', this.value)" required>
-    <option value="" selected disabled>Select Branch</option>
-    <option value="Computer Science and Engineering">Computer Science and Engineering</option>
-    <option value="Electrical Engineering">Electrical Engineering</option>
-    <option value="Mechanical Engineering">Mechanical Engineering</option>
-    <option value="Civil Engineering">Civil Engineering</option>
-    <option value="Chemical Engineering">Chemical Engineering</option>
-    <option value="Electronics and Communication Engineering">Electronics and Communication Engineering</option>
-    <option value="Aerospace Engineering">Aerospace Engineering</option>
-    <option value="Biotechnology">Biotechnology</option>
-    <option value="Environmental Engineering">Environmental Engineering</option>
-</select>
-
-<label for="preference-1">*Preference 1:</label>
-<select id="preference-1" name="preference-1" onchange="updateBranchOptions('preference-2', this.value)" required>
-    <option value="" selected disabled>Select Branch</option>
-    <option value="Computer Science and Engineering">Computer Science and Engineering</option>
-    <option value="Electrical Engineering">Electrical Engineering</option>
-    <option value="Mechanical Engineering">Mechanical Engineering</option>
-    <option value="Civil Engineering">Civil Engineering</option>
-    <option value="Chemical Engineering">Chemical Engineering</option>
-    <option value="Electronics and Communication Engineering">Electronics and Communication Engineering</option>
-    <option value="Aerospace Engineering">Aerospace Engineering</option>
-    <option value="Biotechnology">Biotechnology</option>
-    <option value="Environmental Engineering">Environmental Engineering</option>
-</select>
-
-
-
-
-
+        <label for="preference-6">*Preference 6:</label>
+        <select id="preference-6" name="preference-6" required>
+            <option value="" selected disabled>Select Branch</option>
+            <option value="Computer Science and Engineering">Computer Science and Engineering</option>
+            <option value="Electrical Engineering">Electrical Engineering</option>
+            <option value="Mechanical Engineering">Mechanical Engineering</option>
+            <option value="Civil Engineering">Civil Engineering</option>
+            <option value="Chemical Engineering">Chemical Engineering</option>
+            <option value="Electronics and Communication Engineering">Electronics and Communication Engineering</option>
+            <option value="Aerospace Engineering">Aerospace Engineering</option>
+            <option value="Biotechnology">Biotechnology</option>
+            <option value="Environmental Engineering">Environmental Engineering</option>
+        </select>
 
         <!-- Admission Essay -->
         <label for="essay">Admission Essay:</label>
         <textarea id="essay" name="essay" rows="4" required></textarea>
 
         <!-- Submit Button -->
-        <button type="submit">Submit</button>
+        <button type="submit" class="redirect-button">Submit</button>
     </form>
 
 </body>
