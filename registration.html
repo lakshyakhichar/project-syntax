@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Admission Application</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        form {
+            max-width: 600px;
+            margin: 20px; /* Adjust the margin as needed */
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #ed0f0f;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="/submit" method="post">
+        <h2>College Admission Application</h2>
+
+        <!-- Personal Information -->
+        <!-- Full Name -->
+        <label for="name">*Full Name:</label>
+        <input type="text" id="name" name="name" required>
+        <!-- Father -->
+        <label for="father-name">*Father's Name:</label>
+        <input type="text" id="father-name" name="father-name" required>
+        <!-- Mother -->
+        <label for="mother-name">*Mother's Name:</label>
+        <input type="text" id="mother-name" name="mother-name" required>
+        <!-- DOB -->
+        <label for="dob">*Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+        <!-- Email -->
+        <label for="email">*Email:</label>
+        <input type="email" id="email" name="email" required>
+        <!-- Mobile Number -->
+        <label for="mobile">*Mobile Number:</label>
+        <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required>
+        <!-- Category Information -->
+        <label for="category">*Category:</label>
+        <select id="category" name="category" required>
+            <option value="" selected disabled>Select</option>
+            <option value="GEN">GEN</option>
+            <option value="OBC">OBC</option>
+            <option value="SC">SC</option>
+            <option value="ST">ST</option>
+            <option value="Minority">Minority</option>
+            <option value="Others">Others</option>
+        </select>
+        <!-- Address -->
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" rows="4" required></textarea>
+        <!-- District -->
+        <label for="district">*District:</label>
+        <input type="text" id="district" name="district" required>
+        <!-- PIN -->
+        <label for="pin">*PIN:</label>
+        <input type="tel" id="pin" name="pin" pattern="[0-9]{6}" required>
+        <!-- State -->
+        <label for="state">*Select State:</label>
+        <select id="state" name="state" required>
+                <option value="" selected disabled>Select State</option>
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                <option value="Assam">Assam</option>
+                <option value="Bihar">Bihar</option>
+                <option value="Chhattisgarh">Chhattisgarh</option>
+                <option value="Goa">Goa</option>
+                <option value="Gujarat">Gujarat</option>
+                <option value="Haryana">Haryana</option>
+                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                <option value="Jharkhand">Jharkhand</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Manipur">Manipur</option>
+                <option value="Meghalaya">Meghalaya</option>
+                <option value="Mizoram">Mizoram</option>
+                <option value="Nagaland">Nagaland</option>
+                <option value="Odisha">Odisha</option>
+                <option value="Punjab">Punjab</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="Sikkim">Sikkim</option>
+                <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="Telangana">Telangana</option>
+                <option value="Tripura">Tripura</option>
+                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                <option value="Uttarakhand">Uttarakhand</option>
+                <option value="West Bengal">West Bengal</option>
+                <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                <option value="Chandigarh">Chandigarh</option>
+                <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and Daman and Diu</option>
+                <option value="Lakshadweep">Lakshadweep</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Puducherry">Puducherry</option>
+        </select>
+        
+        <!-- Academic Information -->
+        <!-- class10 -->
+        <label for="class10Percentage">*Class 10th Percentage:</label>
+        <input type="number" id="class10Percentage" name="class10Percentage" min="33" max="100" step="0.01" required>
+        <!-- class12 -->
+        <label for="class12Percentage">*Class 12th Percentage:</label>
+        <input type="number" id="class12Percentage" name="class12Percentage" min="33" max="100" step="0.01" required>
+        <!-- jeerollno -->
+        <label for="jeerollno">JEE Mains Roll Number:</label>
+        <input type="text" id="jeerollno" name="jeerollno" pattern="[A-Za-z0-9]+" title="Alphanumeric characters only" required>
+        <!-- jeescore -->
+        <label for="jeescore">JEE Mains Score (in percentile):</label>
+        <input type="number" id="jeescore" name="jeescore" min="0" max="100" step="0.0000000001" required>
+        
+        <!-- Document Upload -->
+        <label for="class10marksheet">Upload your class 10th Marksheet (in PDF):</label>
+        <input type="file" id="class10marksheet" name="class10marksheet" accept=".pdf" required>
+        <small>Only PDF files are allowed.</small>
+
+        <label for="class12marksheet">Upload your class 12th Marksheet (in PDF):</label>
+        <input type="file" id="class12marksheet" name="class12marksheet" accept=".pdf" required>
+        <small>Only PDF files are allowed.</small>
+
+        <label for="jeescorecard">Upload your JEE SCORECARD (in PDF):</label>
+        <input type="file" id="jeescorecard" name="jeescorecard" accept=".pdf" required>
+        <small>Only PDF files are allowed.</small>
+
+        <!-- Photo Upload -->
+        <label for="photo">Upload your Passport-size Photo (Max size: 2MB):</label>
+        <input type="file" id="photo" name="photo" accept="image/*" size="2097152" required>
+        <small>Only image files (up to 2MB) are allowed.</small>
+        
+        <!-- Branch Preferences --><!--
+        <label for="preference-1">*Preference 1:</label>
+        <select id="preference-1" name="preference-1" onchange="updateBranchOptions('preference-2', this.value)" required>
+            <option value="" selected disabled>Select Branch</option>
+            <option value="Computer Science and Engineering">Computer Science and Engineering</option>
+            <option value="Electrical Engineering">Electrical Engineering</option>
+            <option value="Mechanical Engineering">Mechanical Engineering</option>
+            <option value="Civil Engineering">Civil Engineering</option>
+            <option value="Chemical Engineering">Chemical Engineering</option>
+            <option value="Electronics and Communication Engineering">Electronics and Communication Engineering</option>
+            <option value="Aerospace Engineering">Aerospace Engineering</option>
+            <option value="Biotechnology">Biotechnology</option>
+            <option value="Environmental Engineering">Environmental Engineering</option>
+        </select>
+    -->
+        <!-- Branch Preferences -->
+<label for="preference-1">*Preference 1:</label>
+<select id="preference-1" name="preference-1" onchange="updateBranchOptions('preference-2', this.value)" required>
+    <option value="" selected disabled>Select Branch</option>
+    <option value="Computer Science and Engineering">Computer Science and Engineering</option>
+    <option value="Electrical Engineering">Electrical Engineering</option>
+    <option value="Mechanical Engineering">Mechanical Engineering</option>
+    <option value="Civil Engineering">Civil Engineering</option>
+    <option value="Chemical Engineering">Chemical Engineering</option>
+    <option value="Electronics and Communication Engineering">Electronics and Communication Engineering</option>
+    <option value="Aerospace Engineering">Aerospace Engineering</option>
+    <option value="Biotechnology">Biotechnology</option>
+    <option value="Environmental Engineering">Environmental Engineering</option>
+</select>
+
+
+
+
+
+
+        <!-- Admission Essay -->
+        <label for="essay">Admission Essay:</label>
+        <textarea id="essay" name="essay" rows="4" required></textarea>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>
