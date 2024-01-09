@@ -17,7 +17,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {font-family: Arial, Helvetica, sans-serif;}
-form {border: 3px solid #f1f1f1;}
+form{
+  border-top: 2px solid rgb(11, 14, 17);
+  
+}
 
 input[type=text], input[type=password] {
   width: 100%;
@@ -48,9 +51,9 @@ button:hover {
   background-color: #f44336;
 }
 
-.imgcontainer {
-  text-align: center;
-  margin: 24px 0 12px 0;
+.imgcontainer img{
+  height: 200px;
+  padding-left: 560px;
 }
 
 img.avatar {
@@ -59,7 +62,9 @@ img.avatar {
 }
 
 .container {
-  padding: 16px;
+  padding: 10px;
+  width: 300px;
+  margin-left: 600px;
 }
 
 span.psw {
@@ -79,13 +84,13 @@ span.psw {
 }
 </style>
 </head>
-<body>
+<body style="background-color: rgb(221, 204, 180);">
 
-<h2>Login Form</h2>
+<h2 style="text-align: center;">Login Form</h2>
 
 <form action="/action_page.php" method="post">
   <div class="imgcontainer">
-    <img src="img_avatar2.png" alt="Avatar" class="avatar">
+    <img src="../img/bkbiet-logo.png" alt="Avatar" >
   </div>
 
   <div class="container">
@@ -103,7 +108,7 @@ span.psw {
     </label>
   </div>
 
-  <div class="container" style="background-color:#f1f1f1">
+  <div class="container" style="background-color: transparent">
     <button type="button" class="cancelbtn">Cancel</button>
     <span class="psw">Forgot <a href="#">password?</a></span>
   </div>
